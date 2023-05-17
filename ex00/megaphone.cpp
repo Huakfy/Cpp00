@@ -12,5 +12,6 @@ int	main(int argc, char **argv) {
 					std::cout << (char)toupper(argv[i][j]);
 				else
 					std::cout << argv[i][j];
+	std::cout << std::endl;
 	return 0;
 }
