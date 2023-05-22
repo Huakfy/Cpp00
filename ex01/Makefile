@@ -1,6 +1,6 @@
-NAME	=	megaphone
+NAME	=	phonebook
 
-SRCS	=	megaphone.cpp
+SRCS	=	main.cpp
 
 CC		=	c++
 
@@ -8,7 +8,7 @@ FLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 RM		=	rm -f
 
-${NAME}: ${SRCS} Makefile
+${NAME}: ${SRCS} Makefile PhoneBook.hpp Contact.hpp PhoneBook.cpp Contact.cpp
 	${CC} ${FLAGS} ${SRCS} -o ${NAME}
 
 all:	${NAME}
