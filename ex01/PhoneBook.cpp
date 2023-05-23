@@ -43,4 +43,17 @@ void	PhoneBook::Search() {
 	std::cout << std::right << std::setw(width) << " ------------------------------------------- " << std::endl;
 }
 
+void		PhoneBook::Print(int i) {
+	if (i > this->_nbContact)
+	{
+		std::cout << "Contact doesn't exist" << std::endl;
+		return;
+	}
+	std::cout << "First Name: " << this->_contacts[i].Get_fName() << std::endl;
+	std::cout << "Last Name: " << this->_contacts[i].Get_lName() << std::endl;
+	std::cout << "Nickname: " << this->_contacts[i].Get_nName() << std::endl;
+	std::cout << "Phone Number: " << this->_contacts[i].Get_pNumb() << std::endl;
+	std::cout << "Darkest Secret: " << this->_contacts[i].Get_dSecr() << std::endl;
+}
+
 int	PhoneBook::_nbContact = 0;
