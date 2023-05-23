@@ -1,9 +1,10 @@
 #include "PhoneBook.cpp"
 
-#include <unistd.h>
-#include <sys/ioctl.h>
+# include <iostream>
+# include <unistd.h>
+# include <sys/ioctl.h>
 
-bool	AddContact(PhoneBook PB)
+bool	AddContact(PhoneBook *PB)
 {
 	std::string	fName;
 	std::string	lName;
@@ -26,7 +27,7 @@ bool	AddContact(PhoneBook PB)
 	std::cout << "Darkest Secret: ";
 	if (!std::getline(std:: cin, dSecr))
 		return (0);
-	PB.AddContact(fName, lName, nName, pNumb, dSecr);
+	(*PB).AddContact(fName, lName, nName, pNumb, dSecr);
 	return (1);
 }
 
@@ -45,10 +46,11 @@ int	main(void)
 
 	while (std::cout << "Waiting for a command (ADD || SEARCH || EXIT)" << std::endl && std::getline(std::cin, cmd))
 	{
-		if (cmd == "ADD")
-			if (!AddContact(PB))
-				break;
-		if (cmd == "EXIT")
+		if (cmd == "ADD" && !AddContact(&PB))
+			break;
+		else if (cmd == "SEARCH")
+			std::cout << "[" << PB.get_fName(0) << "]" << std::endl;
+		else if (cmd == "EXIT")
 			break;
 	}
 	return (0);
