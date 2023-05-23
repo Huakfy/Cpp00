@@ -1,6 +1,6 @@
 #include "Contact.hpp"
 
-Contact::Contact(){
+Contact::Contact() {
 	return;
 }
 
@@ -8,7 +8,7 @@ Contact::~Contact() {
 	return;
 }
 
-void	Contact::set_attr(std::string a, std::string b, std::string c, std::string d, std::string e) {
+void	Contact::SetAttr(std::string a, std::string b, std::string c, std::string d, std::string e) {
 	this->_fName = a;
 	this->_lName = b;
 	this->_nName = c;
@@ -17,22 +17,22 @@ void	Contact::set_attr(std::string a, std::string b, std::string c, std::string 
 	return;
 }
 
-std::string	Contact::get_fName() const {
+std::string	Contact::Get_fName() const {
 	return this->_fName;
 }
 
-std::string	Contact::get_lName() const {
+std::string	Contact::Get_lName() const {
 	return this->_lName;
 }
 
-std::string	Contact::get_nName() const {
+std::string	Contact::Get_nName() const {
 	return this->_nName;
 }
 
-std::string	Contact::get_pNumb() const {
+std::string	Contact::Get_pNumb() const {
 	return this->_pNumb;
 }
 
-std::string	Contact::get_dSecr() const {
+std::string	Contact::Get_dSecr() const {
 	return this->_dSecr;
 }

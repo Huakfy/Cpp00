@@ -14,11 +14,11 @@ private:
 public:
 	Contact();
 	~Contact();
-	void set_attr(std::string a, std::string b, std::string c, std::string d, std::string e);
-	std::string	get_fName() const;
-	std::string	get_lName() const;
-	std::string	get_nName() const;
-	std::string	get_pNumb() const;
-	std::string	get_dSecr() const;
+	void SetAttr(std::string a, std::string b, std::string c, std::string d, std::string e);
+	std::string	Get_fName() const;
+	std::string	Get_lName() const;
+	std::string	Get_nName() const;
+	std::string	Get_pNumb() const;
+	std::string	Get_dSecr() const;
 };
 #endif
