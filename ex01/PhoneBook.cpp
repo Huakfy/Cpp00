@@ -44,7 +44,7 @@ void	PhoneBook::Search() {
 }
 
 void		PhoneBook::Print(int i) {
-	if (i > this->_nbContact)
+	if (i + 1 > this->_nbContact)
 	{
 		std::cout << "Contact doesn't exist" << std::endl;
 		return;
