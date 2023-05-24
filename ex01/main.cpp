@@ -1,4 +1,4 @@
-#include "PhoneBook.cpp"
+#include "PhoneBook.hpp"
 
 bool	invalid_char(std::string str) {
 	for (long unsigned int i = 0; i < str.size(); i++)

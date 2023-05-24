@@ -1,7 +1,7 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include "Contact.cpp"
+# include "Contact.hpp"
 # include <iostream>
 # include <iomanip>
 # include <sys/ioctl.h>
